@@ -84,3 +84,23 @@
   [ "$status" -ne 0 ]
   [ "$output" != "success" ]
 }
+
+@test "--version option returns same version as in package.json" {
+  expected="$(node -p "require('./package.json').version")"
+  output="$(./wait-for --version)"
+
+  [ "$output" = "$expected" ]
+}
+
+@test "--version option returns 0 status code" {
+   run ./wait-for --version
+
+  [ "$status" -eq 0 ]
+}
+
+@test "--version response matches shorthand -v" {
+  long_form="$(./wait-for --version)"
+  short_form="$(./wait-for -v)"
+
+  [ "$long_form" = "$short_form" ]
+}
