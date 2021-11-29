@@ -1,3 +1,10 @@
+# [2.2.0](https://github.com/eficode/wait-for/compare/v2.1.3...v2.2.0) (2021-11-29)
+
+
+### Features
+
+* adds -v and --version flag to show the version (Thanks [@philipp-kunz-mimacom](https://github.com/philipp-kunz-mimacom)) ([8636f50](https://github.com/eficode/wait-for/commit/8636f50d4a83e3e1c44fafae7c3d63f2f3d8db49)), closes [#71](https://github.com/eficode/wait-for/issues/71)
+
 ## [2.1.3](https://github.com/eficode/wait-for/compare/v2.1.2...v2.1.3) (2021-07-12)
 
 
