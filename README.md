@@ -72,9 +72,8 @@ Eficode site is up
 
 To wait for database container to become available:
 
-
 ```yml
-version: '3'
+version: "3"
 
 services:
   db:
@@ -88,6 +87,7 @@ services:
 ```
 
 To check if [https://www.eficode.com](https://www.eficode.com) is available over HTTPS:
+
 ```
 $ ./wait-for https://www.eficode.com -- echo "Eficode is accessible over HTTPS"
 Eficode is accessible over HTTPS
@@ -95,9 +95,8 @@ Eficode is accessible over HTTPS
 
 To wait for your API service to become available:
 
-
 ```yml
-version: '3'
+version: "3"
 
 services:
   api:
@@ -108,12 +107,11 @@ services:
     command: sh -c './wait-for http://api -- echo "The api is up! Let's use it"'
     depends_on:
       - api
-
 ```
 
 ## Testing
 
-Ironically testing is done using [bats](https://github.com/sstephenson/bats), which on the other hand is depending on [bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)).
+Ironically testing is done using [bats](https://github.com/sstephenson/bats), which on the other hand is depending on [bash](<https://en.wikipedia.org/wiki/Bash_(Unix_shell)>).
 
     docker build -t wait-for .
     docker run --rm -t wait-for
@@ -124,15 +122,16 @@ When creating PRs, please style your commit messages according to [conventional 
 
 This project strongly prefers maintaining backwards compatibility, therefore some obvious "fixes" might not be accepted.
 
-Also, please include or update the test cases whenever possible by extending `wait-for.bats`. 
-    
+Also, please include or update the test cases whenever possible by extending `wait-for.bats`.
+
 ## Note
 
 Make sure netcat is installed in your Dockerfile before running the command if you test over plain TCP.
+
 ```
 RUN apt-get -q update && apt-get -qy install netcat
 ```
+
 https://stackoverflow.com/questions/44663180/docker-why-does-wait-for-always-time-out
 
 If you are connecting over HTTP, then you will need to have wget available.
-
