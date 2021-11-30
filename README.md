@@ -6,7 +6,7 @@
   <p align="center">
      Wait for another service to become available
   <br/>
-  
+
   <a href="https://github.com/Eficode/wait-for/graphs/contributors">
   <img src="https://img.shields.io/github/contributors/Eficode/wait-for.svg?style=flat-square">
   </a>
@@ -49,6 +49,7 @@ With the file locally on your file system, you can directly invoke it.
 ./wait-for host:port|url [-t timeout] [-- command args]
   -q | --quiet                        Do not output any status messages
   -t TIMEOUT | --timeout=timeout      Timeout in seconds, zero for no timeout
+  -v | --version                      Show the version of this tool
   -- COMMAND ARGS                     Execute command with args after the test finishes
 ```
 
@@ -116,7 +117,7 @@ Ironically testing is done using [bats](https://github.com/sstephenson/bats), wh
 
     docker build -t wait-for .
     docker run --rm -t wait-for
-    
+
 ## Contributing
 
 When creating PRs, please style your commit messages according to [conventional commit](https://www.conventionalcommits.org/en/v1.0.0/), you can use a tool like [commitizen](https://github.com/commitizen/cz-cli) to guide you. We will automatically infer the changelog from your commits. Alternatively, we can squash all commits when merging and update the commit message.
@@ -134,4 +135,4 @@ RUN apt-get -q update && apt-get -qy install netcat
 https://stackoverflow.com/questions/44663180/docker-why-does-wait-for-always-time-out
 
 If you are connecting over HTTP, then you will need to have wget available.
- 
+
