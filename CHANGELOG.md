@@ -1,3 +1,10 @@
+## [2.2.1](https://github.com/eficode/wait-for/compare/v2.2.0...v2.2.1) (2021-12-03)
+
+
+### Bug Fixes
+
+* wget timeout does not double ([206b38d](https://github.com/eficode/wait-for/commit/206b38d01ddf0fe76ea35efadc4ebdfb6c877895))
+
 # [2.2.0](https://github.com/eficode/wait-for/compare/v2.1.3...v2.2.0) (2021-11-29)
 
 
