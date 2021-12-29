@@ -19,3 +19,14 @@ updates:
       - 'npm'
       - 'dependencies'
 
+  # Maintain dependencies for docker images in dockerfiles FROM clauses
+  - package-ecosystem: 'docker'
+    directory: '/'
+    schedule:
+      interval: 'daily'
+    labels:
+      - 'docker'
+      - 'dependencies'
+    ignore:
+      - dependency-name: 'node'
+        update-types: ['version-update:semver-major']
