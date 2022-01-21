@@ -1,3 +1,10 @@
+## [2.2.2](https://github.com/eficode/wait-for/compare/v2.2.1...v2.2.2) (2022-01-21)
+
+
+### Bug Fixes
+
+* **timeout:** resolve degredation which prevented setting indefinite timeout ([b45e76c](https://github.com/eficode/wait-for/commit/b45e76cba24166e52c7e1d71fb4c0f557c05de7d))
+
 ## [2.2.1](https://github.com/eficode/wait-for/compare/v2.2.0...v2.2.1) (2021-12-03)
 
 
