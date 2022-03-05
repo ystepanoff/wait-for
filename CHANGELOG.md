@@ -1,3 +1,10 @@
+## [2.2.3](https://github.com/eficode/wait-for/compare/v2.2.2...v2.2.3) (2022-03-05)
+
+
+### Bug Fixes
+
+* **http:** corrects protocol check for wget availability ([#82](https://github.com/eficode/wait-for/issues/82)) ([570c9fb](https://github.com/eficode/wait-for/commit/570c9fbbfd4bd3f86deee2d1159d35c2b80806a4))
+
 ## [2.2.2](https://github.com/eficode/wait-for/compare/v2.2.1...v2.2.2) (2022-01-21)
 
 
