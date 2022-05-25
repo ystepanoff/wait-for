@@ -61,6 +61,15 @@ $ wget -qO- https://raw.githubusercontent.com/eficode/wait-for/v2.2.3/wait-for |
 
 _Note: When using the latter option, make sure to pin the version by commit hash. Future releases could introduce non-backwards compatible changes and leaves you vulnerable to malicious users modifying this script in the future (as has e.g. [happened with Codecov](https://about.codecov.io/security-update/))._
 
+This can also be easily used in GitHub Actions, like so:
+
+```yaml
+      - name: Wait for the database to start
+        run: wget -qO- https://raw.githubusercontent.com/eficode/wait-for/$WAIT_FOR_VERSION/wait-for | sh -s -- localhost:5132 -- echo "Database is up"
+        env:
+          WAIT_FOR_VERSION: 4df3f9262d84cab0039c07bf861045fbb3c20ab7 # v2.2.3
+```
+
 ## Examples
 
 To check if [www.eficode.com](https://www.eficode.com) is available:
