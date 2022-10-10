@@ -120,10 +120,14 @@ services:
 
 ## Testing
 
-Ironically testing is done using [bats](https://github.com/sstephenson/bats), which on the other hand is depending on [bash](<https://en.wikipedia.org/wiki/Bash_(Unix_shell)>).
+Testing is done using [bats](https://github.com/bats-core/bats-core), which we install using [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm). 
 
-    docker build -t wait-for .
-    docker run --rm -t wait-for
+For reproducability, we run our tests inside Docker, such that we have control over the version of [bash](<https://en.wikipedia.org/wiki/Bash_(Unix_shell)>) we're testing against.
+
+```bash
+docker build -t wait-for .
+docker run --rm -t wait-for
+```
 
 ## Contributing
 
